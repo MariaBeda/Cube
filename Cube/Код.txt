@@ -1,0 +1,33 @@
+
+
+
+Main:
+
+	Facet f = new Facet(new R3Vector(0,0,0),new R3Vector(0,1,0),new R3Vector(1,1,0),new R3Vector(1,0,0));
+	f.out();
+	f.rotate(0,0,90); f.out();
+
+
+
+
+
+Facet.java
+
+	public class Facet{
+		private R3Vector[] facets;
+		public Facet(R3Vector v1,R3Vector v2, R3Vector v3,R3Vector v4){
+			facets = new R3Vector[4];
+			facets[0]=v1;
+			}
+	}
+
+	public void out(){
+		for(inti=0; i<facets.length;i++)
+			{facets[i].out();
+	}
+	
+	public void rotate(double ux, double uy, double uz){
+		for(int i=0; i<facets.length;i++)
+			{facets[i].rotate(ux,uy,uz);}
+			
+	}
